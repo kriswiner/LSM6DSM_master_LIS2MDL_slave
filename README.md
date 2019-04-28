@@ -9,4 +9,6 @@ The idea here is that the LIS2MDL, which always has I2C address 0x1E, can be man
 The scheme can be extended to 10 Dof with the addition of a LPS22HB slave.
 
 This method allows two or more 9- or 10-DoF sensors to be on the same I2C bus for use, for example, in wearable applications where joint motion is to be measured, etc.
+
+These sketches are intended to run on the STM32L4 Dragonflu development board but can be easily adapted to work with the Teensy or ESP32.
  
