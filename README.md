@@ -12,5 +12,5 @@ This method allows two or more 9- or 10-DoF sensors to be on the same I2C bus fo
 
 These sketches are intended to run on the STM32L4 Dragonfly development board but can be easily adapted to work with the Teensy or ESP32.
 
-Appropriate breakout boards for these sensors are available on Tinde.
+Appropriate breakout boards for these sensors are available on Tindie.
  
