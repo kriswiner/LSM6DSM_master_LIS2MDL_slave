@@ -4,7 +4,7 @@ Sketches to read 10 DoF sensor data from an LSM6DSM master and LIS2MDL + LPS22HB
 
 ![breadboard](https://user-images.githubusercontent.com/6698410/56867677-e045db80-699c-11e9-9c6d-eaea89b286a6.jpg)
 
-The idea here is that the LIS2MDL, which always has I2C address 0x1E, can be managed by the LSM6DSM so that multiple LSM6DSM's can be on the same host I2C bus and the magnetometers can be kept straight. The host only reads and writes to LSM6DSM registers, never talks with the LIS2MDL directly (except to configure in Setup) and, in effect, the LIS2MDL becomes part of an integrated 9 DoF LSM6DSM and all transactions can be performed by reference to the 0x6A or 0x6B I2C address of the "host" LSM6DSM. This avoids the conflict that usually occurs when two LIS2MDL are exposed directly to the MCU host on the master I2C bus since both LIS2MDL will always have the same I2C address.
+The idea here is that the LIS2MDL, which always has I2C address 0x1E, can be managed by the LSM6DSM so that multiple LSM6DSMs can be on the same host I2C bus and the magnetometers can be kept straight. The host only reads and writes to LSM6DSM registers, never talks with the LIS2MDL directly (except to configure in Setup) and, in effect, the LIS2MDL becomes part of an integrated 9 DoF LSM6DSM and all transactions can be performed by reference to the 0x6A or 0x6B I2C address of the master LSM6DSM. This avoids the conflict that usually occurs when two LIS2MDL are exposed directly to the MCU host on the host I2C bus since both LIS2MDL will always have the same I2C address.
 
 The scheme can be extended to 10 Dof with the addition of a LPS22HB slave.
 
