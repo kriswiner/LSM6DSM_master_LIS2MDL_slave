@@ -1,0 +1,1 @@
+# LSM6DSM_master_LIS2MDL_slave
