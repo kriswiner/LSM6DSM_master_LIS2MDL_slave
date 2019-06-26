@@ -1,4 +1,4 @@
-Dual LSM6DSM accel/gyro on the same i2C bus each with an LIS2MDL magnetometer and LPS22HB barometer. 
+Dual LSM6DSM accel/gyro on the same I2C bus each with an LIS2MDL magnetometer and LPS22HB barometer using the STM32L433 Butterfly development board as host MCU. 
 In this case, we are taking advantage of the STM32L4's stop mode and sleep/wake functions to put the MCU and all sensors into a low-power sleep
 mode and then wake everything up to calculate quaternions on a ten second on/off duty cycle. The "timer" is a simple counter run off of
 the RTC set for 1 second alarms (interrupts). 
