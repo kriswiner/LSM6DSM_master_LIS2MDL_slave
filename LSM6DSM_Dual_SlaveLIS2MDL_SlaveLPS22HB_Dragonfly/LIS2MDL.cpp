@@ -49,7 +49,7 @@ void LIS2MDL::init(uint8_t MODR)
  _i2c_bus->writeByte(LIS2MDL_ADDRESS, LIS2MDL_CFG_REG_B, 0x01);  
 
  // enable data ready on interrupt pin (bit 0 == 1), enable block data read (bit 4 == 1)
- _i2c_bus->writeByte(LIS2MDL_ADDRESS, LIS2MDL_CFG_REG_C, 0x01 | 0x10);  
+ _i2c_bus->writeByte(LIS2MDL_ADDRESS, LIS2MDL_CFG_REG_C, 0x10);  
 }
 
 
