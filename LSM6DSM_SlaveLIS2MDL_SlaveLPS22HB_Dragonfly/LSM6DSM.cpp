@@ -66,7 +66,7 @@ void LSM6DSM::masterMode()
   _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_FUNC_CFG_ACCESS, 0x00);                   // disable access to embedded function registers (Bank A)
 
   _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_CTRL10_C, 0x04);                          // enable embedded functions
-  _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_MASTER_CONFIG, 0x19);                     // enable master mode, internal pullups, accel trigger drdy
+  _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_MASTER_CONFIG, 0x09);                     // enable master mode, internal pullups, accel trigger drdy
   _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_CTRL6_C, 0x00);                           // un-configure INT2 as input
   _i2c_bus->writeByte(LSM6DSM_ADDRESS, LSM6DSM_CTRL1_XL, c);                             // reset accel with previous configuration
 }
